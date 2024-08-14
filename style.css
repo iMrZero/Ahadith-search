@@ -74,3 +74,10 @@ body {
         display: none;
     }
 }
+/* Mobile styles */
+@media (max-width: 425px) {
+    /* styles for small mobile devices */
+    .search-box {
+        width: 330px;
+    }
+}
