@@ -18,4 +18,3 @@ async function displayData() {
   resualt.innerHTML = data.ahadith.result.replace(regex, "");
 }
 searchBtn.addEventListener("click", displayData);
-searchBtn.addEventListener("touchstart", displayData);
