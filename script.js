@@ -6,7 +6,7 @@ async function fetchData(param) {
     const data = await respone.json();
     return data;
   } catch (error) {
-    console.log(`unable to fetch date from ${url} : ${error}`);
+    console.log(`unable to fetch date from ${param} : ${error}`);
   }
 }
 searchBtn.addEventListener("click", async () => {
