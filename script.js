@@ -13,6 +13,7 @@ searchBtn.addEventListener("click", async () => {
   const searchKey = document.getElementById("key-word").value;
   const resualt = document.getElementById("result");
   const data = await fetchData(api_url + searchKey);
+  if (searchKey == "" || searchKey.length == 3) return;
   resualt.innerHTML = data.ahadith.result.replace(/<br\/>|-*/g, "");
   console.log(data);
 });
