@@ -9,11 +9,13 @@ async function fetchData(param) {
     console.log(`unable to fetch date from ${param} : ${error}`);
   }
 }
-searchBtn.addEventListener("click", async () => {
+async function displayData() {
   const searchKey = document.getElementById("key-word").value;
   const resualt = document.getElementById("result");
   const data = await fetchData(api_url + searchKey);
+  const regex = /<br\/>|-*/g;
   if (searchKey == "" || searchKey.length == 3) return;
-  resualt.innerHTML = data.ahadith.result.replace(/<br\/>|-*/g, "");
-  console.log(data);
-});
+  resualt.innerHTML = data.ahadith.result.replace(regex, "");
+}
+searchBtn.addEventListener("click", displayData);
+searchBtn.addEventListener("touchstart", displayData);
