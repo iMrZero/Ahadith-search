@@ -1,0 +1,76 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Open+Sans:wght@300..800&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --primary-clr: #444444;
+    --secondary-clr: #0A77C5;
+    --txt-primary: #DBCCAD;
+    --txt-secondary: #CAC3B1;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+.container {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+.search-box {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .09);
+    & input {
+        width: calc(100% - 120px);
+        padding: inherit;
+        height: 100%;
+        border: none;
+        border-radius: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    & input:focus {
+        outline: none;
+        color: var(--primary-clr);
+    }
+    & button {
+        width: 100px;
+        padding: inherit;
+        border-radius: inherit;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .1);
+    }
+}
+.result {
+    position: relative;
+    z-index: -1;
+    top: 99px;
+    margin: 15px;
+    & .hadith {
+        background-color: var(--txt-primary);
+        padding: 15px;
+        border-radius: 7px 7px 0 0;
+    }
+    & .hadithinfo {
+        background-color: var(--txt-secondary);
+        padding: 0 15px;
+        margin-bottom: 5px;
+        border-radius: 0 0 7px 7px;
+    }
+    & a {
+        display: none;
+    }
+}
